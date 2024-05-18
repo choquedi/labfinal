@@ -2,7 +2,7 @@
 FROM nginx:latest
 
 # Copia los archivos estáticos de la aplicación al directorio de trabajo de Nginx
-COPY /app /usr/share/nginx/html
+COPY app /usr/share/nginx/html
 
 # Expone el puerto en el que Nginx estará escuchando
 EXPOSE 80
