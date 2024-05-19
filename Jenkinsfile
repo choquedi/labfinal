@@ -1,14 +1,13 @@
 pipeline {
     agent any
     
-    stages {
-        stage('Build Docker Image') {
-            steps {
-                script {
-                    // Construye la imagen Docker
-                    docker.build("dockerfile:lastest")
-                }
-            }
-        }
+	stages {
+		stage('Construir imagen Docker') {
+			steps {
+				script {
+				dockerImage('choquedi/repomod04:latest').build()
+				}
+			}
+		}
     }
 }
