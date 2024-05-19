@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     // Construye la imagen Docker
-                    docker.build("choquedi/repomod04:lastest")
+                    docker.build("${DOCKER_HUB_USER}/repomod04:latest")
                 }
             }
         }
